@@ -37,23 +37,15 @@ body {
     width: 240px;
 }
 
-/* 🔥 GRID PRO */
+/* GRID */
 .servicios {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en PC */
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     padding: 40px;
 }
 
-/* TABLET */
 @media (max-width: 900px) {
-    .servicios {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* CELULAR */
-@media (max-width: 500px) {
     .servicios {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -71,11 +63,6 @@ body {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
 }
 
 .card::before {
@@ -100,59 +87,6 @@ body {
     margin: 10px 40px;
     border-radius: 10px;
     color: #333;
-}
-
-/* METODO */
-.metodo {
-    background: linear-gradient(120deg,#0f2027,#203a43,#2c5364);
-    padding: 80px 20px;
-    text-align: center;
-    color: white;
-}
-
-.metodo h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 40px;
-}
-
-.metodo-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.paso {
-    width: 260px;
-    padding: 30px;
-    border-radius: 15px;
-    color: white;
-    text-align: center;
-}
-
-.paso1 { background: linear-gradient(135deg,#ff6a00,#ee0979); }
-.paso2 { background: linear-gradient(135deg,#00c6ff,#0072ff); }
-.paso3 { background: linear-gradient(135deg,#11998e,#38ef7d); }
-
-/* CLIENTES */
-.clientes {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.clientes-box {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cliente {
-    background: white;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
 /* CONTACTO */
@@ -185,41 +119,92 @@ body {
 <div class="hero-content">
 <img src="logo3.png" class="logo">
 <h1>Gestión Profesional en Seguridad y Salud en el Trabajo</h1>
-<p>Desarrollamos su SG-SST de forma personalizada.</p>
+<p>Desarrollamos su SG-SST conforme a la normatividad vigente en Colombia.</p>
 </div>
 </div>
 
 <section class="servicios">
 
-<!-- TODAS IGUALES -->
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg');"><h3>Implementación SG-SST</h3></div>
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg');"><h3>Auditorías</h3></div>
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg');"><h3>Capacitación</h3></div>
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');"><h3>Riesgo Psicosocial</h3></div>
-
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');"><h3>SIRPSI</h3></div>
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg');"><h3>Inspecciones de Seguridad</h3></div>
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg');"><h3>Investigación de Accidentes</h3></div>
-<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg');"><h3>Plan de Emergencias</h3></div>
-
-</section>
-
-<section class="metodo">
-<h2>MÉTODO JF CONSULTORES</h2>
-<div class="metodo-box">
-<div class="paso paso1">Diagnóstico</div>
-<div class="paso paso2">Implementación</div>
-<div class="paso paso3">Seguimiento</div>
+<!-- IMPLEMENTACIÓN -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg');">
+<h3>Implementación SG-SST</h3>
 </div>
-</section>
-
-<section class="clientes">
-<h2>Empresas que confían en nosotros</h2>
-<div class="clientes-box">
-<div class="cliente">INDUMETALES LOZADA SAS</div>
-<div class="cliente">REFRINDUSTRIAL DG SAS</div>
-<div class="cliente">COMIDAS DIANA COAVICONSA</div>
+<div class="contenido">
+<p>Diseñamos e implementamos el Sistema de Gestión de Seguridad y Salud en el Trabajo conforme al Decreto 1072 de 2015 y la Resolución 0312 de 2019, ajustado al nivel de riesgo, número de trabajadores y actividad económica de la empresa.</p>
 </div>
+</div>
+
+<!-- AUDITORÍAS -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg');">
+<h3>Auditorías</h3>
+</div>
+<div class="contenido">
+<p>Realizamos auditorías internas del SG-SST conforme a los estándares mínimos exigidos por la Resolución 0312 de 2019, identificando hallazgos, no conformidades y oportunidades de mejora.</p>
+</div>
+</div>
+
+<!-- CAPACITACIÓN -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg');">
+<h3>Capacitación</h3>
+</div>
+<div class="contenido">
+<p>Capacitaciones alineadas al SG-SST según la normatividad vigente, incluyendo inducción, reinducción, trabajo en alturas, brigadas de emergencia y prevención de riesgos laborales.</p>
+</div>
+</div>
+
+<!-- PSICOSOCIAL -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');">
+<h3>Riesgo Psicosocial</h3>
+</div>
+<div class="contenido">
+<p>Aplicación de la batería de riesgo psicosocial conforme a la Resolución 2404 de 2019, incluyendo análisis, intervención y seguimiento.</p>
+</div>
+</div>
+
+<!-- SIRPSI -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');">
+<h3>SIRPSI</h3>
+</div>
+<div class="contenido">
+<p>Gestión, implementación y reporte del Sistema de Información de Riesgos Psicosociales (SIRPSI) conforme a los lineamientos del Ministerio de Trabajo.</p>
+</div>
+</div>
+
+<!-- INSPECCIONES -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg');">
+<h3>Inspecciones de Seguridad</h3>
+</div>
+<div class="contenido">
+<p>Realizamos inspecciones planeadas y no planeadas para identificar condiciones inseguras, actos inseguros y control de riesgos laborales.</p>
+</div>
+</div>
+
+<!-- ACCIDENTES -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg');">
+<h3>Investigación de Accidentes</h3>
+</div>
+<div class="contenido">
+<p>Investigación de accidentes e incidentes de trabajo conforme a la Resolución 1401 de 2007, determinando causas y acciones correctivas.</p>
+</div>
+</div>
+
+<!-- EMERGENCIAS -->
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg');">
+<h3>Plan de Emergencias</h3>
+</div>
+<div class="contenido">
+<p>Diseño, implementación y actualización del Plan de Emergencias conforme a la normatividad vigente, incluyendo brigadas, simulacros y rutas de evacuación.</p>
+</div>
+</div>
+
 </section>
 
 <div class="contacto">
@@ -234,7 +219,8 @@ body {
 
 <script>
 function toggle(element) {
-alert("Aquí puedes mostrar la información detallada profesional");
+let contenido = element.nextElementSibling;
+contenido.style.display = contenido.style.display === "block" ? "none" : "block";
 }
 </script>
 
