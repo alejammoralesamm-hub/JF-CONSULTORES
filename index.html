@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>JF Consultores</title>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    background: url('https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg') center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 240px;
+}
+
+/* 🔥 MARCA */
+.marca {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+/* CINTA */
+.cinta {
+    width: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffcc00,
+        #ffcc00 20px,
+        #000 20px,
+        #000 40px
+    );
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    animation: mover 10s linear infinite;
+}
+
+@keyframes mover {
+    from { background-position: 0 0; }
+    to { background-position: 200px 0; }
+}
+
+/* SERVICIOS */
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+@media (max-width: 900px) {
+    .servicios {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .card {
+        height: 160px;
+    }
+
+    .marca {
+        font-size: 28px;
+    }
+}
+
+.card {
+    position: relative;
+    height: 220px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.card::after {
+    content: "➜";
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    font-size: 18px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 6px 10px;
+    border-radius: 50%;
+}
+
+.card h3 {
+    position: relative;
+    z-index: 2;
+}
+
+/* CONTENIDO */
+.contenido {
+    display: none;
+    background: white;
+    padding: 20px;
+    margin: 10px 40px;
+    border-radius: 10px;
+    color: #333;
+}
+
+/* CONTACTO */
+.contacto {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 60px;
+    background: url('https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg') center/cover no-repeat;
+}
+
+.contacto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.contacto * {
+    position: relative;
+    z-index: 2;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<img src="logo3.png" class="logo">
+
+<div class="marca">JF CONSULTORES</div>
+
+<h1>Protegemos su empresa y garantizamos cumplimiento en Seguridad y Salud en el Trabajo</h1>
+
+<p>Desarrollamos su SG-SST conforme a la normatividad vigente en Colombia.</p>
+
+</div>
+</div>
+
+<!-- CINTA -->
+<div class="cinta">
+SEGURIDAD • SALUD • PREVENCIÓN • CUMPLIMIENTO LEGAL • SG-SST • PROTECCIÓN EMPRESARIAL
+</div>
+
+<!-- SERVICIOS -->
+<section class="servicios">
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg');">
+<h3>Implementación SG-SST</h3>
+</div>
+<div class="contenido"><p>Implementación conforme Decreto 1072 y Resolución 0312.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg');">
+<h3>Auditorías</h3>
+</div>
+<div class="contenido"><p>Evaluación del SG-SST.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg');">
+<h3>Capacitación</h3>
+</div>
+<div class="contenido"><p>Formación en prevención.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');">
+<h3>Riesgo Psicosocial</h3>
+</div>
+<div class="contenido"><p>Resolución 2404 de 2019.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');">
+<h3>SIRPSI</h3>
+</div>
+<div class="contenido"><p>Gestión del sistema.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg');">
+<h3>Inspecciones de Seguridad</h3>
+</div>
+<div class="contenido"><p>Control de riesgos.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg');">
+<h3>Investigación de Accidentes</h3>
+</div>
+<div class="contenido"><p>Resolución 1401 de 2007.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg');">
+<h3>Plan de Emergencias</h3>
+</div>
+<div class="contenido"><p>Planes de evacuación.</p></div>
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+<div class="contacto">
+<h2>Contáctanos</h2>
+<p>📍 Calle 103 No 13D-27 Provenza</p>
+<p>Bucaramanga, Santander - Colombia</p>
+<p>📞 315 222 0324</p>
+<p>📧 alejammorales.amm@gmail.com</p>
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/573152220324">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="45">
+</a>
+
+<script>
+function toggle(element) {
+let contenido = element.nextElementSibling;
+contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
