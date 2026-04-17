@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>JF Consultores</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    background: url('https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg') center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 240px;
+}
+
+/* GRID PC */
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+/* 🔥 AJUSTE SOLO CELULAR (SOLUCIÓN REAL) */
+@media (max-width: 900px) {
+    .servicios {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .card {
+        height: 160px;
+    }
+}
+
+/* TARJETAS */
+.card {
+    position: relative;
+    height: 220px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* ICONO */
+.card::after {
+    content: "➜";
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    font-size: 18px;
+    color: #ffffff;
+    background: rgba(0,0,0,0.5);
+    padding: 6px 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.card h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* CONTENIDO */
+.contenido {
+    display: none;
+    background: white;
+    padding: 20px;
+    margin: 10px 40px;
+    border-radius: 10px;
+    color: #333;
+}
+
+/* CONTACTO */
+.contacto {
+    background: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 60px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+<div class="hero-content">
+<img src="logo3.png" class="logo">
+<h1>Gestión Profesional en Seguridad y Salud en el Trabajo</h1>
+<p>Desarrollamos su SG-SST conforme a la normatividad vigente en Colombia.</p>
+</div>
+</div>
+
+<section class="servicios">
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg');">
+<h3>Implementación SG-SST</h3>
+</div>
+<div class="contenido"><p>Diseñamos e implementamos el SG-SST conforme al Decreto 1072 de 2015 y Resolución 0312 de 2019.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg');">
+<h3>Auditorías</h3>
+</div>
+<div class="contenido"><p>Auditorías internas del SG-SST identificando hallazgos y acciones de mejora.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg');">
+<h3>Capacitación</h3>
+</div>
+<div class="contenido"><p>Formación en prevención de riesgos laborales conforme normativa vigente.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');">
+<h3>Riesgo Psicosocial</h3>
+</div>
+<div class="contenido"><p>Aplicación de batería conforme Resolución 2404 de 2019.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');">
+<h3>SIRPSI</h3>
+</div>
+<div class="contenido"><p>Gestión del sistema SIRPSI según lineamientos del Ministerio de Trabajo.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg');">
+<h3>Inspecciones de Seguridad</h3>
+</div>
+<div class="contenido"><p>Identificación de condiciones inseguras y control de riesgos.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg');">
+<h3>Investigación de Accidentes</h3>
+</div>
+<div class="contenido"><p>Investigación conforme Resolución 1401 de 2007.</p></div>
+</div>
+
+<div>
+<div class="card" onclick="toggle(this)" style="background-image:url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg');">
+<h3>Plan de Emergencias</h3>
+</div>
+<div class="contenido"><p>Diseño de planes de emergencia y evacuación.</p></div>
+</div>
+
+</section>
+
+<div class="contacto">
+<h2>Contáctanos</h2>
+<p>📍 Calle 103 No 13D-27 Provenza</p>
+<p>Bucaramanga, Santander - Colombia</p>
+<p>📞 315 222 0324</p>
+<p>📧 alejammorales.amm@gmail.com</p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/573152220324" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="45">
+</a>
+
+<script>
+function toggle(element) {
+let contenido = element.nextElementSibling;
+contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
